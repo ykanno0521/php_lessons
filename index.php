@@ -1,23 +1,24 @@
 <?php
 
-// swich　条件分岐
+// よく使う関数
 
-$signals = array("red", "blue", "yellow");
-$signal = array_rand($signals);
+$x = 5.6;
+echo ceil($x); //小数点以下を切り上げる
+echo '<br>';
+echo floor($x); //小数点以下切り捨て
+echo '<br>';
+echo round($x); //四捨五入
+echo '<br>';
+echo rand(1,10); //　ランダムに出力
+echo '<br>';
 
-echo $signal;
-switch ($signal) {
-  case "red":
-    echo "stop!";
-    break;
-  case "blue":
-    echo "go!";
-    break;
-  case "yellow":
-    echo "caution!";
-    break;
-  default:
-    echo "wrong signal!";
-    break;
-}
-?>
+
+$s1 = "hello";
+$s2 = "ねこ";
+echo strlen($s1); //文字列
+echo '<br>';
+echo mb_strlen($s2); //日本語文字列
+echo '<br>';
+
+printf("%s - %s - %.3f", $s1, $s2, $x );
+
