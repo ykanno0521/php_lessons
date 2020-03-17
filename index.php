@@ -1,18 +1,16 @@
 <?php
 
-define("My_email", "kanno@gmail.com");
+$x = 5;
+// if ($x) {
+if ($x == true) {
+  echo "great";
+}
 
-echo My_email;
-// My_email = "hogehoge";
-// echo My_email;
-echo '<br>';
+// 三項演算子
+$a = 5;
+$b = 10;
+$max = ($a > $b) ? $a : $b;
+var_dump($max);
+echo "10と出力されれば成功";
 
-echo "行数を表示：";
-var_dump(__LINE__);
-echo '<br>';
-echo "ファイル名：";
-var_dump(__FILE__);
-echo '<br>';
-echo "ディレクトリ名：";
-var_dump(__DIR__);
 ?>
