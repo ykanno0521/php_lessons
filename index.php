@@ -1,17 +1,19 @@
 <?php
 
-// 抽象クラス
-abstract class BaseUser {
-  public $name;
-  abstract public function sayHi();
-}
+// require: fatal error　その場で処理が終了する
+// require_once
+// require "User.class.php";
 
-class User extends BaseUser {
-  public function sayHi() {
-    echo "hello from User";
-  }
-}
+// include: warning　処理は続行
+// include_once
 
-// User::sayHi();
+// onceがついているとファイルが読み込まれているかをphpがチェックしてくれる
 
+// autoload
+spl_autoload_register(function($class) {
+  require $class . ".class.php";
+});
+
+$bob = new User("Bob");
+$bob->sayHi();
 ?>
